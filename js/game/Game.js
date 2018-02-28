@@ -94,20 +94,20 @@ class Game extends MapInit {
 
 	printPlay() {
 		var header = new THREE.SphereGeometry( 100, 80, 12);
-		var material = this.loadTexture('/images/negz.jpg');
+		var material = this.loadTexture('./images/negz.jpg');
 		var headerMesh = new THREE.Mesh(header, material);
 
 		headerMesh.position.y = 400;
 
 		var body = new THREE.CylinderGeometry(100, 100, 200, 18, 3);
-		var material = this.loadTexture('/images/negx.jpg');
+		var material = this.loadTexture('./images/negx.jpg');
 		var bodyMesh = new THREE.Mesh(body, material);
 
 		bodyMesh.position.y = 200;
 
 		var foot = new THREE.CylinderGeometry(30, 30, 200, 18, 3);
 		var material = new THREE.MeshLambertMaterial( { color:0x440000} );
-		var material = this.loadTexture('/images/negy.jpg');
+		var material = this.loadTexture('./images/negy.jpg');
 		var footMesh = new THREE.Mesh(foot, material);
 		var rightFootMesh = new THREE.Mesh(foot, material);
 
